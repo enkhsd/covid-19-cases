@@ -204,7 +204,7 @@
                     layers: ['rates-layer']
                 });
                 document.getElementById('text-description').innerHTML = rates.length ?
-                    `<p><strong><em>${rates[0].properties.name}</strong>COVID-19</em></p><p><strong><em>${rates[0].properties.rates}</strong> COVID-19 rates</em></p>` :
+                    `<p><strong><em>${rates[0].properties.county}</strong></em></p><p><strong><em>${rates[0].properties.rates}</strong> COVID-19 rates</em></p>` :
                     `<p>Hover over a county to view COVID-19 rates</p>`;
             });
 
