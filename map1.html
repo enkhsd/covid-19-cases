@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>COVID-19 Cases in the U.S, 2020</title>
+    <title>COVID-19 Rates in the U.S, 2020</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css" rel="stylesheet">
@@ -21,18 +21,8 @@
             width: 100%;
             
         }
-        #title {
-             position: absolute;
-             top: 0;
-             left: 0;
-             background-color: rgb(217, 247, 223);
-             font-family: 'Open Sans', sans-serif;
-             font-size: 20pt;
-             color: rgb(41, 39, 39)
-             
-        } 
-        /* the layout of the legend panel */
         
+        /* the layout of the legend panel */
         #legend {
             position: absolute;
             bottom: 0;
@@ -80,9 +70,6 @@
 <body>
     <div id="map"></div>
     <div id="legend"></div>
-    <div id="title">
-        COVID-19 Case Counts in the U.S
-    </div>
     <script>
         mapboxgl.accessToken =
             'pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw';
@@ -165,7 +152,7 @@
         const legend = document.getElementById('legend');
 
         //set up legend grades and labels
-        var labels = ['<strong>Case Numbers</strong>'],
+        var labels = ['<strong>Cases Numbers</strong>'],
             vbreak;
         //iterate through grades and create a scaled circle and label for each
         for (var i = 0; i < grades.length; i++) {
